@@ -6,7 +6,9 @@ class FishermanTest {
 
   @org.junit.jupiter.api.Test
   void goGetFish() {
-    Fisherman fisherman = new Fisherman();
+    God god = new God();
+    god.createWorld();
+    Fisherman fisherman = god.lookupFisherman();
     Fish fish = fisherman.goGetFish();
     assertNotNull(fish);
   }
